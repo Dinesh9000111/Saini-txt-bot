@@ -325,7 +325,7 @@ async def txt_handler(bot: Client, m: Message):
             elif 'videos.classplusapp' in url or "tencdn.classplusapp" in url or "webvideos.classplusapp.com" in url or "media-cdn-alisg.classplusapp.com" in url or "videos.classplusapp" in url or "videos.classplusapp.com" in url or "media-cdn-a.classplusapp" in url or "media-cdn.classplusapp" in url or "alisg-cdn-a.classplusapp" in url:
              url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJjb3Vyc2VJZCI6IjQ1NjY4NyIsInR1dG9ySWQiOm51bGwsIm9yZ0lkIjo0ODA2MTksImNhdGVnb3J5SWQiOm51bGx9r'}).json()['url']
 
-            elif "d1d34p8vz63oiq" in url or "sec1.pw. live" in url: url = f"https://anonymouspwplayer- b99f57957198.herokuapp.com/pw? url={url}?token={your_working_token}"
+            elif "d1d34p8vz63oiq" in url or "sec1.pw. live" in url: url = f"https://anonymouspwplayer- b99f57957198.herokuapp.com/pw? url={url}?token={eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDI2NTg3MzEuNDczLCJkYXRhIjp7Il9pZCI6IjY2MmRmZDViMWUwMTg1MDAxOGU0M2RhNCIsInVzZXJuYW1lIjoiOTU4ODIwODI5MCIsImZpcnN0TmFtZSI6IkxvdWRhIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwiZW1haWwiOiJsb3ZlQHlhaG9vLmNvbSIsInJvbGVzIjpbIjViMjdiZDk2NTg0MmY5NTBhNzc4YzZlZiJdLCJjb3VudHJ5R3JvdXAiOiJJTiIsInR5cGUiOiJVU0VSIn0sImlhdCI6MTc0MjA1MzkzMX0.dethseXe4mIHgUdLsK4oN_d3N8N1SCiyxPA8JNQkomI}"
                 
             elif '/master.mpd' in url:
              vid_id =  url.split("/")[-2]
