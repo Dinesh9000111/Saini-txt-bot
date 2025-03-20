@@ -108,8 +108,8 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Nikhil_saini_khe"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"),
+            InlineKeyboardButton(text="📞 Contact", url=""),
+            InlineKeyboardButton(text="🛠️ Help", url=""),
         ],
     ]
 )
@@ -118,8 +118,8 @@ keyboard = InlineKeyboardMarkup(
 Busy = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="📞 Contact", url="https://t.me/Nikhil_saini_khe"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"),
+            InlineKeyboardButton(text="📞 Contact", url=""),
+            InlineKeyboardButton(text="🛠️ Help", url=""),
         ],
     ]
 )
@@ -149,8 +149,7 @@ async def start_command(bot: Client, message: Message):
     # Caption for the image
     caption = (
         "🌟 Welcome Boss😸! 🌟\n\n"
-        "➽ I am powerful uploader bot 📥\n\n➽ I Can Extract Videos & Pdf From Your Text File and Upload to Telegram\n\n➽ 𝐔𝐬𝐞 /Stop for **Stop** ⛔ working process \n\n➽ 𝐔𝐬𝐞 /saini Command To Download  Data From TXT File 🗃️ \n\n➽ 𝐌𝐚𝐝𝐞 𝐁𝐲: 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 🦁"
-    )
+        " bhag ja lodu)
 
     await asyncio.sleep(1)
     await loading_message.edit_text(
@@ -200,9 +199,9 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["saini"]) )
+@bot.on_message(filters.command(["moon"]) )
 async def txt_handler(bot: Client, m: Message):
-    editable = await m.reply_text(f"**🔹Hi I am Poweful TXT Downloader📥 Bot.**\n🔹**Send me the TXT file and wait.**")
+    editable = await m.reply_text(f"**Send me the TXT file and wait.**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -324,11 +323,10 @@ async def txt_handler(bot: Client, m: Message):
 
             elif 'videos.classplusapp' in url or "tencdn.classplusapp" in url or "webvideos.classplusapp.com" in url or "media-cdn-alisg.classplusapp.com" in url or "videos.classplusapp" in url or "videos.classplusapp.com" in url or "media-cdn-a.classplusapp" in url or "media-cdn.classplusapp" in url or "alisg-cdn-a.classplusapp" in url:
              url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJjb3Vyc2VJZCI6IjQ1NjY4NyIsInR1dG9ySWQiOm51bGwsIm9yZ0lkIjo0ODA2MTksImNhdGVnb3J5SWQiOm51bGx9r'}).json()['url']
-
-            
+                                        
             elif '/master.mpd' in url:
              vid_id =  url.split("/")[-2]
-             url =  f"https://pwplayer-0e2dbbdc0989.herokuapp.com/player?url=https://d1d34p8vz63oiq.cloudfront.net/{vid_id}/master.m3u8?token={eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDI2NTg3MzEuNDczLCJkYXRhIjp7Il9pZCI6IjY2MmRmZDViMWUwMTg1MDAxOGU0M2RhNCIsInVzZXJuYW1lIjoiOTU4ODIwODI5MCIsImZpcnN0TmFtZSI6IkxvdWRhIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwiZW1haWwiOiJsb3ZlQHlhaG9vLmNvbSIsInJvbGVzIjpbIjViMjdiZDk2NTg0MmY5NTBhNzc4YzZlZiJdLCJjb3VudHJ5R3JvdXAiOiJJTiIsInR5cGUiOiJVU0VSIn0sImlhdCI6MTc0MjA1MzkzMX0.dethseXe4mIHgUdLsK4oN_d3N8N1SCiyxPA8JNQkomI}"
+             url =  f"https://pwplayer-0e2dbbdc0989.herokuapp.com/player?url=https://d1d34p8vz63oiq.cloudfront.net/{vid_id}/master.m3u8?token={PW}"
                              
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{name1[:60]}'
